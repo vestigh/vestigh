@@ -6,7 +6,7 @@ const navLinks = [
   { label: "How it works", href: "#how-it-works" },
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#apply" },
+  { label: "Contact", href: "/apply" },
 ];
 
 const Navbar = () => {
@@ -45,7 +45,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#apply"
+            href="/apply"
             className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
           >
             Get started
@@ -83,7 +83,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#apply"
+                href="/apply"
                 onClick={() => setMobileOpen(false)}
                 className="rounded-md bg-accent px-5 py-2.5 text-center text-sm font-semibold text-accent-foreground"
               >
