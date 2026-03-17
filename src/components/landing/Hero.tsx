@@ -23,7 +23,7 @@ const Hero = () => {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#apply"
+                href="/apply"
                 className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 Start for free
