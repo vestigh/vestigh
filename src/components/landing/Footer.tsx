@@ -7,9 +7,13 @@ const Footer = () => {
         <div className="grid gap-10 md:grid-cols-4">
           {/* Logo */}
           <div>
-            <span className="text-xl font-bold">
-              <span className="text-accent">V</span>estigh
-            </span>
+            <a href="#" className="inline-flex items-center" aria-label="Vestigh home">
+              <img
+                src="/vestigh_logo.svg"
+                alt="Vestigh logo"
+                className="h-12 w-auto md:h-14"
+              />
+            </a>
             <p className="mt-3 text-sm text-primary-foreground/60">
               Virtual try-on fashion stores for Ghana.
             </p>

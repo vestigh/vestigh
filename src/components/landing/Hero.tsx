@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
+import vestighDemoGif from "@/asserts/vestigh_demo.gif";
 
 const Hero = () => {
   return (
@@ -51,22 +52,12 @@ const Hero = () => {
             className="relative"
           >
             <div className="rounded-lg border bg-secondary p-4 shadow-card">
-              <div className="aspect-[4/3] rounded-md bg-vestigh-bg-alt flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
-                    <span className="text-2xl font-bold text-accent">V</span>
-                  </div>
-                  <p className="text-sm font-medium text-primary">Fashion Store Preview</p>
-                  <p className="mt-1 text-xs text-muted-foreground">Virtual try-on enabled</p>
-                  <div className="mt-4 flex justify-center gap-2">
-                    <div className="h-20 w-16 rounded-md bg-border" />
-                    <div className="h-20 w-16 rounded-md bg-border" />
-                    <div className="h-20 w-16 rounded-md bg-border" />
-                  </div>
-                  <div className="mt-4 inline-flex items-center gap-1 rounded-md bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent">
-                    👁 Try it on
-                  </div>
-                </div>
+              <div className="aspect-[4/3] overflow-hidden rounded-md bg-vestigh-bg-alt">
+                <img
+                  src={vestighDemoGif}
+                  alt="Vestigh demo preview showing virtual try-on in a fashion store"
+                  className="h-full w-full rounded-md object-cover"
+                />
               </div>
             </div>
           </motion.div>

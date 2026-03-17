@@ -1,21 +1,18 @@
-import { motion } from "framer-motion";
-import { FileText, Store, Rocket } from "lucide-react";
-
 const steps = [
   {
-    icon: FileText,
+    number: "1",
     title: "Apply",
     description:
       "Fill out a short form with your store details. We review and approve within hours.",
   },
   {
-    icon: Store,
+    number: "2",
     title: "We build your store",
     description:
       "We set up your branded online store with all your products, categories, and payment integration.",
   },
   {
-    icon: Rocket,
+    number: "3",
     title: "Go live",
     description:
       "Your store is live. Customers can browse, try on outfits virtually, and buy — all in one place.",
@@ -31,33 +28,22 @@ const HowItWorks = () => {
           <h2 className="section-headline mt-3">From signup to live store in one day</h2>
         </div>
 
-        <div className="relative mt-16 grid gap-10 md:grid-cols-3 md:gap-8">
-          {/* Dashed connector line — desktop only */}
-          <div className="absolute top-12 left-[20%] right-[20%] hidden border-t-2 border-dashed border-border md:block" />
+        <div className="relative mt-16">
+          <div className="absolute left-[16.666%] right-[16.666%] top-5 hidden border-t-2 border-dashed border-[#f0a500] lg:block" />
 
-          {steps.map((step, i) => (
-            <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: i * 0.15, ease: "easeOut" }}
-              className="relative flex flex-col items-center text-center"
-            >
-              {/* Number badge */}
-              <div className="mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">
-                {i + 1}
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-8">
+            {steps.map((step) => (
+              <div key={step.title} className="relative flex flex-col items-center text-center">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f0a500] text-sm font-bold text-[#1a2340]">
+                  {step.number}
+                </div>
+                <h3 className="mt-4 text-lg font-bold text-[#14213d]">{step.title}</h3>
+                <p className="mt-2 max-w-xs text-sm leading-relaxed text-gray-500">
+                  {step.description}
+                </p>
               </div>
-              {/* Icon */}
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-accent/10">
-                <step.icon size={28} className="text-accent" />
-              </div>
-              <h3 className="text-lg font-semibold text-primary">{step.title}</h3>
-              <p className="mt-2 max-w-xs text-sm leading-relaxed text-muted-foreground">
-                {step.description}
-              </p>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

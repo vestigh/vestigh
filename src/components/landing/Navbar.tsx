@@ -27,10 +27,12 @@ const Navbar = () => {
     >
       <div className="container flex h-16 items-center justify-between md:h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-primary">
-            <span className="text-accent">V</span>estigh
-          </span>
+        <a href="#" className="flex items-center" aria-label="Vestigh home">
+          <img
+            src="/vestigh_logo.svg"
+            alt="Vestigh logo"
+            className="h-10 w-auto md:h-12"
+          />
         </a>
 
         {/* Desktop links */}
