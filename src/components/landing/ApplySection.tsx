@@ -20,7 +20,7 @@ const ApplySection = () => {
 
         <div className="mx-auto mt-10 max-w-2xl overflow-hidden rounded-lg border bg-card shadow-card">
           <iframe
-            src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdS5GhGrFrTGSNWg2j7/viewform?embedded=true"
             width="100%"
             height="800"
             className="border-0"
