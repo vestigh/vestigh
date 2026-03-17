@@ -45,7 +45,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#apply"
+            href="/apply"
             className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
           >
             Get started
