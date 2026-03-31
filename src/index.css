@@ -1,49 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 45% 17%;
+    --background: 240 100% 99%;
+    --foreground: 220 26% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 45% 17%;
+    --card-foreground: 220 26% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 45% 17%;
+    --popover-foreground: 220 26% 12%;
 
-    --primary: 222 45% 17%;
+    --primary: 50 100% 22%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 230 33% 97%;
-    --secondary-foreground: 222 45% 17%;
+    --secondary: 225 100% 97%;
+    --secondary-foreground: 220 26% 12%;
 
-    --muted: 230 33% 97%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 225 100% 97%;
+    --muted-foreground: 221 19% 39%;
 
-    --accent: 40 90% 47%;
-    --accent-foreground: 222 45% 17%;
+    --accent: 50 100% 50%;
+    --accent-foreground: 52 100% 7%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 40 90% 47%;
+    --border: 224 36% 91%;
+    --input: 224 36% 91%;
+    --ring: 50 100% 22%;
 
     --radius: 0.5rem;
 
     /* Vestigh custom tokens */
-    --vestigh-navy: 222 45% 17%;
-    --vestigh-amber: 40 90% 47%;
-    --vestigh-amber-light: 40 100% 97%;
-    --vestigh-gray: 220 9% 46%;
-    --vestigh-bg-alt: 230 33% 97%;
+    --vestigh-navy: 220 26% 12%;
+    --vestigh-amber: 50 100% 50%;
+    --vestigh-amber-light: 50 100% 72%;
+    --vestigh-gray: 221 19% 39%;
+    --vestigh-bg-alt: 225 100% 97%;
 
-    --shadow-card: 0 1px 3px 0 hsl(222 45% 17% / 0.06), 0 1px 2px -1px hsl(222 45% 17% / 0.06);
-    --shadow-card-hover: 0 10px 25px -5px hsl(222 45% 17% / 0.1), 0 8px 10px -6px hsl(222 45% 17% / 0.06);
-    --shadow-nav: 0 1px 3px 0 hsl(222 45% 17% / 0.08);
+    --shadow-card: 0 20px 40px hsl(220 26% 12% / 0.06);
+    --shadow-card-hover: 0 24px 48px hsl(220 26% 12% / 0.1);
+    --shadow-nav: 0 20px 40px hsl(220 26% 12% / 0.06);
   }
 }
 
@@ -63,10 +66,44 @@
 
 @layer components {
   .section-label {
-    @apply text-xs font-semibold uppercase tracking-[0.2em] text-accent;
+    @apply font-label text-xs font-bold uppercase tracking-[0.2em] text-vestigh-slate;
   }
 
   .section-headline {
-    @apply text-3xl font-bold text-primary md:text-4xl;
+    @apply font-headline text-3xl font-bold tracking-tight text-vestigh-navy md:text-4xl;
+  }
+
+  .vestigh-display-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    color: transparent;
+  }
+
+  .vestigh-hero-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .vestigh-cta-diagonal {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .vestigh-glass-nav {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(22, 28, 38, 0.06);
+  }
+
+  .vestigh-dark-panel {
+    background:
+      radial-gradient(circle at top left, rgba(255, 214, 0, 0.12), transparent 32%),
+      linear-gradient(180deg, #2b313c 0%, #161c26 100%);
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 500,
+      "GRAD" 0,
+      "opsz" 24;
+    line-height: 1;
   }
 }
