@@ -369,16 +369,28 @@ const Landing = () => {
                       </p>
                     </div>
 
-                    <button
-                      type="button"
-                      disabled={!item.isAvailable}
-                      aria-disabled={!item.isAvailable}
-                      title={!item.isAvailable ? "Preview coming soon" : undefined}
-                      className="inline-flex items-center gap-2 rounded-full border border-[rgba(127,119,95,0.2)] bg-[#eef3ff] px-4 py-2.5 text-sm font-semibold text-vestigh-slate transition-colors disabled:cursor-not-allowed disabled:opacity-70"
-                    >
-                      Visit site
-                      <span className="material-symbols-outlined text-base">north_east</span>
-                    </button>
+                    {item.isAvailable && item.href.trim().length > 0 ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-[rgba(127,119,95,0.2)] bg-[#eef3ff] px-4 py-2.5 text-sm font-semibold text-vestigh-slate transition-colors hover:bg-[#dbe7ff]"
+                      >
+                        Visit site
+                        <span className="material-symbols-outlined text-base">north_east</span>
+                      </a>
+                    ) : (
+                      <button
+                        type="button"
+                        disabled
+                        aria-disabled="true"
+                        title="Preview coming soon"
+                        className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-[rgba(127,119,95,0.2)] bg-[#eef3ff] px-4 py-2.5 text-sm font-semibold text-vestigh-slate opacity-70"
+                      >
+                        Visit site
+                        <span className="material-symbols-outlined text-base">north_east</span>
+                      </button>
+                    )}
                   </div>
                 </motion.article>
               ))}
