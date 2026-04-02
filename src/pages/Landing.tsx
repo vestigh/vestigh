@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { showcaseItems } from "@/data/showcase";
 
 type PlanFeature = {
   text: string;
@@ -11,15 +12,6 @@ type CommitmentOption = {
   key: "3" | "6" | "12";
   label: string;
   discount: number;
-};
-
-type ShowcaseItem = {
-  title: string;
-  description: string;
-  imageSrc: string;
-  imageAlt: string;
-  href: string;
-  isAvailable: boolean;
 };
 
 const navItems = [
@@ -81,45 +73,6 @@ const features = [
     icon: "notifications_active",
     title: "Email notifications",
     description: "Beautifully designed transactional emails that build trust with every send.",
-  },
-];
-
-const showcaseItems: ShowcaseItem[] = [
-  {
-    title: "Noir Atelier",
-    description:
-      "An editorial streetwear concept store designed for timed drops, immersive campaign imagery, and high-intent checkout.",
-    imageSrc: "/placeholder.svg",
-    imageAlt: "Placeholder preview for the Noir Atelier storefront",
-    href: "",
-    isAvailable: false,
-  },
-  {
-    title: "Sable Muse",
-    description:
-      "A refined womenswear boutique built around seasonal capsules, elevated product storytelling, and a premium minimalist tone.",
-    imageSrc: "/placeholder.svg",
-    imageAlt: "Placeholder preview for the Sable Muse storefront",
-    href: "",
-    isAvailable: false,
-  },
-  {
-    title: "Aster Thread Co.",
-    description:
-      "A menswear storefront focused on bold typography, lookbook-led discovery, and merchandising blocks that move shoppers fast.",
-    imageSrc: "/placeholder.svg",
-    imageAlt: "Placeholder preview for the Aster Thread Co. storefront",
-    href: "",
-    isAvailable: false,
-  },
-  {
-    title: "Lune District",
-    description:
-      "A contemporary ready-to-wear showroom blending brand-first layouts with clean product navigation and fast mobile shopping.",
-    imageSrc: "/placeholder.svg",
-    imageAlt: "Placeholder preview for the Lune District storefront",
-    href: "",
-    isAvailable: false,
   },
 ];
 
