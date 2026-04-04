@@ -17,5 +17,14 @@ export const showcaseItems: ShowcaseItem[] = [
     href: "https://akosuaprints.vestigh.com",
     isAvailable: true,
   },
+   {
+    title: "E&S Closet",
+    description:
+      "E&S Closet was created with the idea that great style should feel both beautiful and attainable. We believe fashion should inspire confidence, reflect individuality, and make every woman feel her best without compromise.Based in Ghana, our brand is built around carefully selected styles that bring together modern trends, elegance, and effortless sophistication. Each collection is chosen for women who appreciate fashion that feels refined, confident, and easy to wear.",
+    imageSrc: "/eandscloset.jpeg",
+    imageAlt: "Placeholder preview for the E&S Closet storefront",
+    href: "https://escloset.vestigh.com",
+    isAvailable: true,
+  },
   
 ];
