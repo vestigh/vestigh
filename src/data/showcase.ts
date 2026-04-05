@@ -5,6 +5,8 @@ export type ShowcaseItem = {
   imageAlt: string;
   href: string;
   isAvailable: boolean;
+  badge?: string;
+  tag?: string;
 };
 
 export const showcaseItems: ShowcaseItem[] = [
@@ -16,6 +18,8 @@ export const showcaseItems: ShowcaseItem[] = [
     imageAlt: "Placeholder preview for the Akosua Prints storefront",
     href: "https://akosuaprints.vestigh.com",
     isAvailable: true,
+    badge: "Fashion Boutique",
+    tag: "Live Store",
   },
    {
     title: "E&S Closet",
@@ -25,6 +29,8 @@ export const showcaseItems: ShowcaseItem[] = [
     imageAlt: "Placeholder preview for the E&S Closet storefront",
     href: "https://escloset.vestigh.com",
     isAvailable: true,
+    badge: "Contemporary Fashion",
+    tag: "Featured",
   },
   
 ];
