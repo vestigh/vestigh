@@ -1,6 +1,11 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
+type PlanFeature = {
+  text: string;
+  included: boolean;
+};
+
 type CommitmentOption = {
   key: "3" | "6" | "12";
   label: string;
@@ -11,6 +16,25 @@ const commitments: CommitmentOption[] = [
   { key: "3", label: "3 months - save 12%", discount: 0.12 },
   { key: "6", label: "6 months - save 20%", discount: 0.2 },
   { key: "12", label: "12 months - save 32%", discount: 0.32 },
+];
+
+const freeFeatures: PlanFeature[] = [
+  { text: "Complete online store", included: true },
+  { text: "Virtual try-on (50 requests/month)", included: true },
+  { text: "Paystack payments", included: true },
+  { text: "Vestigh subdomain", included: true },
+  { text: "Custom domain", included: false },
+  { text: "Priority support", included: false },
+  { text: "5% transaction fee", included: true },
+];
+
+const proFeatures: PlanFeature[] = [
+  { text: "Everything in Free", included: true },
+  { text: "Unlimited try-on requests", included: true },
+  { text: "Custom domain", included: true },
+  { text: "0% transaction fee", included: true },
+  { text: "Priority WhatsApp support", included: true },
+  { text: "Faster store setup", included: true },
 ];
 
 const baseMonthlyPrice = 375;
@@ -62,30 +86,12 @@ const PricingSection = () => {
             <div className="plan-period">No credit card required</div>
             <div className="plan-divider"></div>
             <ul className="plan-features">
-              <li>
-                <span className="check">{"\u2713"}</span> Complete online store
-              </li>
-              <li>
-                <span className="check">{"\u2713"}</span> Up to 50 GHS shipping events
-              </li>
-              <li>
-                <span className="check">{"\u2713"}</span> Flexible payments
-              </li>
-              <li>
-                <span className="check">{"\u2713"}</span> Vestigh subdomain
-              </li>
-              <li>
-                <span className="cross">-</span> Custom domain
-              </li>
-              <li>
-                <span className="cross">-</span> Priority support
-              </li>
-              <li>
-                <span className="cross">-</span> 0% transaction fee
-              </li>
-              <li>
-                <span className="cross">-</span> Faster store setup
-              </li>
+              {freeFeatures.map((feature) => (
+                <li key={feature.text}>
+                  <span className={feature.included ? "check" : "cross"}>{feature.included ? "\u2713" : "\u2715"}</span>{" "}
+                  {feature.text}
+                </li>
+              ))}
             </ul>
             <Link to="/apply" className="plan-btn plan-btn-outline">
               Get started free
@@ -118,27 +124,11 @@ const PricingSection = () => {
             </div>
             <div className="plan-divider"></div>
             <ul className="plan-features">
-              <li>
-                <span className="check">{"\u2713"}</span> Everything in Free
-              </li>
-              <li>
-                <span className="check">{"\u2713"}</span> Unlimited requests
-              </li>
-              <li>
-                <span className="check">{"\u2713"}</span> Flexible domains
-              </li>
-              <li>
-                <span className="check">{"\u2713"}</span> Custom domain
-              </li>
-              <li>
-                <span className="check">{"\u2713"}</span> 0% transaction fee
-              </li>
-              <li>
-                <span className="check">{"\u2713"}</span> Priority WhatsApp support
-              </li>
-              <li>
-                <span className="check">{"\u2713"}</span> Faster store setup
-              </li>
+              {proFeatures.map((feature) => (
+                <li key={feature.text}>
+                  <span className="check">{"\u2713"}</span> {feature.text}
+                </li>
+              ))}
             </ul>
             <Link to="/apply" className="plan-btn plan-btn-solid">
               Get started

@@ -18,7 +18,7 @@ const freeFeatures: PlanFeature[] = [
   { text: "Vestigh subdomain", included: true },
   { text: "Custom domain", included: false },
   { text: "Priority support", included: false },
-  { text: "0% transaction fee", included: false },
+  { text: "5% transaction fee", included: true },
 ];
 
 const proFeatures: PlanFeature[] = [
