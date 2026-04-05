@@ -60,7 +60,7 @@ const Landing = () => {
     <div className="landing-page" ref={rootRef}>
       <nav ref={navRef}>
         <a href="#hero" className="nav-logo">
-          VEST<span>IGH</span>
+          <img src="/vestigh_logo_official.png" alt="Vestigh logo" className="nav-logo-img" />
         </a>
         <ul className="nav-links">
           <li>

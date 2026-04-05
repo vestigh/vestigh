@@ -50,6 +50,8 @@ nav {
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.6rem;
   font-weight: 600;
@@ -61,6 +63,12 @@ nav {
 
 .nav-logo span {
   color: var(--gold);
+}
+
+.nav-logo-img {
+  display: block;
+  height: 44px;
+  width: auto;
 }
 
 .nav-links {
@@ -1752,6 +1760,10 @@ footer {
 
   .nav-links {
     display: none;
+  }
+
+  .nav-logo-img {
+    height: 38px;
   }
 
   .hero {
