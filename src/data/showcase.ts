@@ -11,12 +11,12 @@ export type ShowcaseItem = {
 
 export const showcaseItems: ShowcaseItem[] = [
   {
-    title: "Akosua Prints",
+    title: "Eli's Kolektion",
     description:
-      "Akosua Print is an online fashion store offering beautiful kaftans, Ankara styles, and other elegant African wear for women who love comfort, culture, and style. We bring you carefully selected pieces that blend tradition with modern fashion, making it easy to shop standout looks for everyday wear and special occasions.",
-    imageSrc: "/akosuaprint.jpeg",
-    imageAlt: "Placeholder preview for the Akosua Prints storefront",
-    href: "https://akosuaprints.vestigh.com",
+      "Eli's Kolektion was built on a simple belief: that great style should be accessible, intentional, and worth keeping. What began as a personal obsession with curating the right pieces grew into a destination for those who dress with purpose. Every item in the kolektion is handpicked — not for trend, but for lasting relevance. We look for silhouettes that command attention, fabrics that hold their shape, and pieces that feel like a statement every time you put them on. Eli's Kolektion is more than a store. It is a curation. A living archive of pieces that matter — footwear that tells a story, streetwear that earns its place, and apparel that outlasts the season it arrived in.",
+    imageSrc: "/eliskolektion.jpeg",
+    imageAlt: "Placeholder preview for the Eli's Kolektion storefront",
+    href: "https://eliskolektion.vestigh.com",
     isAvailable: true,
     badge: "Fashion Boutique",
     tag: "Live Store",
